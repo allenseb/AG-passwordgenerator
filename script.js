@@ -15,7 +15,7 @@ function writePassword() {
   else {
     alert('password was not within length criteria');
   }
- 
+ //line 10-17 determine pswrd length criteria
 
 }
 
@@ -25,6 +25,7 @@ function generatePassword(passwordLength) {
   var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
   var numbers = '0123456789';
+//variables above differentiate character types
 
   if (document.getElementById("checkbox1").checked) {
     characters += upperCase
@@ -40,9 +41,10 @@ function generatePassword(passwordLength) {
     var randomInteger = Math.floor(Math.random() * characters.length)
     password += characters.charAt(randomInteger)
   }
-
   return password
 }
+
+//for loop above executes code if it meets specified criteria
 
 function getPasswordLength() {
  let userInput = prompt("Please enter password length") 
